@@ -5,6 +5,7 @@ function PopupWithForm({
   textButton,
   isOpen,
   onClose,
+  onSubmit,
   ...props
 }) {
   return (
@@ -16,6 +17,7 @@ function PopupWithForm({
           action="#"
           name={`${name}`}
           className={`popup__form popup__form_type_${name}`}
+          onSubmit={onSubmit}
         >
           {props.children}
           <button
